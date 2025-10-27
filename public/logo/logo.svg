@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
+  <defs>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#D4AF37;stop-opacity:1">
+        <animate attributeName="stop-color" values="#D4AF37;#FFD700;#D4AF37" dur="3s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" style="stop-color:#C9A86A;stop-opacity:1">
+        <animate attributeName="stop-color" values="#C9A86A;#F4C430;#C9A86A" dur="3s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Outer Circle with Animation -->
+  <circle cx="150" cy="150" r="140" fill="none" stroke="url(#goldGradient)" stroke-width="3" filter="url(#glow)">
+    <animate attributeName="stroke-dasharray" values="0 880;880 0;0 880" dur="4s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Scissors Icon (Luxury Style) -->
+  <g transform="translate(150, 150)" filter="url(#glow)">
+    <path d="M-40,-30 Q-45,-35 -40,-40 L-20,-20 Q-15,-15 -20,-10 Z" fill="url(#goldGradient)">
+      <animateTransform attributeName="transform" type="rotate" values="0;-10;0" dur="2s" repeatCount="indefinite"/>
+    </path>
+    <path d="M40,-30 Q45,-35 40,-40 L20,-20 Q15,-15 20,-10 Z" fill="url(#goldGradient)">
+      <animateTransform attributeName="transform" type="rotate" values="0;10;0" dur="2s" repeatCount="indefinite"/>
+    </path>
+    <line x1="-20" y1="-20" x2="20" y2="-20" stroke="url(#goldGradient)" stroke-width="4"/>
+  </g>
+
+  <!-- Text with Premium Font -->
+  <text x="150" y="220" font-family="'Playfair Display', serif" font-size="28" font-weight="bold" text-anchor="middle" fill="url(#goldGradient)" filter="url(#glow)">
+    NEW IMAGE
+    <animate attributeName="opacity" values="0.7;1;0.7" dur="3s" repeatCount="indefinite"/>
+  </text>
+  
+  <text x="150" y="245" font-family="'Montserrat', sans-serif" font-size="14" text-anchor="middle" fill="#C9A86A" letter-spacing="4">
+    HAIR SALON
+  </text>
+</svg>
