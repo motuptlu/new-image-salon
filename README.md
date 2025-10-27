@@ -6,4 +6,4 @@ A luxury hair salon website built with Next.js, featuring advanced animations, a
 
 ### 1. Install Dependencies
 ```bash
-npm install
+npm install 
