@@ -355,4 +355,41 @@ export default function Pricing() {
 
       {/* CTA */}
       <section className="py-16 bg-gradient-to-r from-primary/20 via-accent/20 to-primary/20">
-        <div 
+        <div className="container mx-auto px-4 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl md:text-5xl font-heading font-bold text-white mb-6">
+              Ready to Book Your Transformation?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Contact us today for a free consultation or to schedule your appointment
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <a
+                href="https://wa.me/14037013610?text=Hi! I'd like to book an appointment"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="luxury-button px-10 py-4 rounded-full font-semibold text-white text-lg"
+              >
+                <FaWhatsapp className="inline mr-2" />
+                BOOK VIA WHATSAPP
+              </a>
+              <a
+                href="/contact"
+                className="glass-effect border-2 border-primary px-10 py-4 rounded-full font-semibold text-white text-lg hover:bg-primary/20 transition-all"
+              >
+                CONTACT US
+              </a>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      <Footer />
+      <BookingButton />
+    </>
+  )
+}
